@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Rangers | Flexible use of electricity</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+
+
+
+<h2 align="center"><u>Power Rangers</u><br>Flexible use of electricity<br>
+    <span STYLE="font-size:10pt">By<br> <p STYLE="font-size:7pt">Sanjida Nusrat Ananna</p><br><p STYLE="font-size:7pt">Md. Sanaul Haque Shanto</p></span>
+
+</h2>
+<br>
+
+
+    <p style="align-content: center;">
+        <u><b>Proposed solution</b></u> <br>
+The south Asian country, Bangladesh, located in the heart of the Ganges-Brahmaputra-Delta has a very limited energy reserve; small
+amounts of oil, coal and countable natural gas reserves. The country suffers an internal energy struggle, as <u><b>about 93% of the country’s
+power producing thermal plants</b></u> are gas-based, but the gas is also needed for the industrial sector. The power sector in Bangladesh is
+highly dependent on fossil fuels, as natural gas and coal are the dominating sources for power generation in the country. <u><b>About 62.9%
+of Bangladeshi generated electricity comes from natural gas, while 10% is from diesel, 5% comes from coal, 3% of heavy oil, and
+3.3% is from renewable sources</b></u>. But there is a continuous and rapidly widening gap between electricity supply and demand, therefore
+it is a major challenge for the energy sector in Bangladesh. Problems of Bangladesh’s electric power sector include high system losses,
+delays in completion of new plants, low plant efficiency, erratic power supply, electricity thefts, blackouts and shortage of funds for
+power plant maintenance. The country’s generation plants have been unable to meet system demand over the past decade.
+</p>
+<br>
+<br>
+<div id="graphenergy" class="interactive"></div>
+<br>
+<br>
+ <p style="align-content: center;">
+For those reasons, our team has chosen the national grid sector in Bangladesh which is installed with a capacity of <u><b>25,514 MW</b></u> as of
+March 2022. We have planned on making a website which will show the current condition of <u><b>BD power grid, generation mix,
+environmental positive impact, carbon emission and cost analysis</b></u> with a possible solution through the <u><b>traditional scientific
+implementations</b></u> including <u><b>large scale photovoltaic integration and combining solar power with coal fired power plants ( Coal-
+solar hybrids, Coal natural gas co firing) for scaling down coal.</b></u> <br><br>
+
+    </p>
+<p style="align-content: center;">
+<u><b>1. Modeling of BD Power System through Photovoltaic Integration</b></u> <br>
+Photovoltaic (PV) array which is composed of modules is considered as the fundamental power conversion unit of a PV generator system. The PV array has
+nonlinear characteristics and it is quite expensive and takes much time to get the operating curves of a PV array under varying operating conditions. In order to
+overcome these obstacles, common and simple models of solar panels have been developed and integrated into many engineering software including
+Matlab/Simulink. However, these models are not adequate for applications involving hybrid energy systems since they <u><b>need a flexible tuning of some parameters</b></u>
+in the system and not easily understandable for readers to use by themselves. Therefore, our aim is to show the output characteristic curves of the given input of the
+targeting solar power of the national grid of Bangladesh with the output <u><b>power, current, voltage decreases</b></u> though an accurate, reliable and easy-to-tune model of
+photovoltaic array with the <u><b>estimating cost analysis</b></u>.
+</p>  <br><br>
+
+
+<p style="align-content: center;">
+<u><b>2. Combining solar power with coal fired power plants</b></u> <br>
+<u><b>Coal-solar hybrid:</b></u><br>
+<p>
+    This approach can
+replace a portion of coal demand by
+substituting its energy contribution via
+input from a solar field. During daylight
+operation, solar energy can be used to
+reduce coal consumption (coal-reducing
+mode). As solar radiation decreases during
+the latter part of the day, the coal
+contribution can be increased, allowing the
+plant’s boiler to always operate at full load.
+When solar radiation increases again, the
+process is reversed, with solar input
+gradually reducing that of coal.
+Alternatively, input from the solar field can
+be used to produce additional steam that
+can be fed through the turbine, increasing
+electricity output (solar boost).
+</p>
+<br>
+
+<center>
+    <img src="img/fig1.JPG" alt="Fig 1: The first coal-solar hybrid in the Cameo Generating Station"><br>
+    <p style="font-size: 10px;">Fig 1: The first coal-solar hybrid in the Cameo Generating Station</p>
+</center>
+
+<u><b>Coal natural gas co-firing:</b></u><br>
+<p>
+    Coal natural gas co-firing: Another option attracting the
+interest of some power utilities is that of co firing natural gas in coal-
+fired boilers. This technique can be instrumental in improving
+operational flexibility and reducing emissions. It avoids the
+intermittency issues of renewables such as solar power, but clearly
+retains some of the disadvantages associated with fossil fuels in
+general.
+Both coal- and gas-based generation are vital in powering many of the
+world’s developed and emerging economies. Both are used to provide
+a secure and uninterrupted supply of electricity, needed to ensure that
+economies and societies can develop and prosper. In some countries,
+coal provides much of the power, whereas in others gas dominates.
+However, there are many instances where the national energy mix
+includes combinations of the two. Each brings its own well-
+documented advantages and disadvantages, but recent years have
+seen a growing interest in means by which these two fuels might be
+combined in an environmentally-friendly and cost-effective way.
+</p>
+</p>
+    <br><br>
+
+    <center>
+        <input type="text" id="input_time" placeholder="time">
+        <input type="text" id="input_position" placeholder="position">
+        <button id="add">Add data</button>
+        <button id="reset">⟳</button>
+        <br><br>
+        <p id="totals">Cost:— Coal-solar hybrids:— Coal natural gas:—</p>
+        <br>
+        <table id="dtTable">
+            <tr>
+                <th>Source</th>
+                <th>Cost</th>
+            <tr>
+        </table>
+        <br>
+    </center>
+
+
+    <center>
+        <div class="graph-container">
+            <canvas id="dtChart" width="7px" height="7px"></canvas>
+        </div>
+
+        <div class="graph-container">
+            <canvas id="vtChart" width="7px" height="7px"></canvas>
+        </div>
+    </center>
+
+<br>
+<br>
+<br>
+<div class="interactive">
+    <div style = "width: 50%; min-width: 360px; margin: 0 auto;">
+        <label for="amount1">Energy Sources:</label>
+        <input type="text" id="amount1" readonly style="border:0; color:#f6931f; font-size:1em;">
+        <div id="slider1"></div>
+        <label for="amount2"> Costs:</label>
+        <input type="text" id="amount2" readonly style="border:0; color:#f6931f; font-size:1em;">
+        <div id="slider2"></div>
+        The odds of finding the system in the least likely state are about 1 in <input type="text" id="amount3" readonly style="border:0; color:#f6931f; font-size:1em;">
+    </div>
+    <br>
+    <div id="graphenergyinteractive"></div>
+</div>
+
+<br>
+<br>
+<p style="align-content: center;">
+<u><b>Hypothesis</b></u> <br>
+Implementing the PV integration will show the output characteristic curves of the given input of the targeting solar power of
+the national grid of Bangladesh with the output <u><b>power, current, voltage decreases</b></u>. It is also robustly advantageous in
+investigating the solar PV array operation from different <u><b>physical parameters (series, shunt resistance, ideality factor, etc.)</b></u>
+and <u><b>working condition ( varying temperature, irradiation and especially partial shadow effect)</b></u> aspects with low power
+output, <u><b>a flexible tuning and a reasonable demand</b></u>.
+<br>
+<br>
+In the case of improving plant flexibility, these include combining coal with solar energy or natural gas. Our second
+approach: Combining coal-firing with solar power plants has the potential to improve <u><b>operational flexibility, moderate
+plant costs and reduce carbon emissions</b></u>.
+
+</p>
+<br><br>
+<p style="align-content: center;">
+<u><b>Research Plan</b></u> <br>
+To raise awareness through creating a website which will allow us to gather the output results of our
+scientific approaches, condition of <u><b>Bangladesh national power grid, generation mix, environmental
+positive impact, carbon emission, cost analysis and demand</b></u>.
+<br><br>
+Furthermore, solar energy and fossil fuels are not adequate for applications involving hybrid energy
+systems since they need a flexible tuning of some parameters in the system and not easily understandable
+for readers to use by themselves. So, we have planned on <u><b>modeling a large scale photovoltaic integration</b></u>
+to implement the specific input energy of MW power with a characteristics output curves, and as
+mentioned in the proposed solution, through our <u><b>carbon emission method by scaling down the coal
+using solar hybrid and natural gas co-firing</b></u>, we would be able to reduce carbon emission ( not
+eliminating it) with the operation flexibility, moderate plant costs and demands.
+</p><br>
+
+
+<br>
+<p style="align-content: center;">
+<u><b>Data and summary</b></u> <br>
+<ol type="1">
+  <li>Grid System of National Power Grid of Bangladesh</li>
+</ol>
+The power generated at different power stations is transmitted through a national grid system (230 kV & 132 kV) operated and maintained by Power Grid
+Company of Bangladesh Limited (PGCB). At present, the national grid system has the capability to handle a maximum load of about 10,000 MW.
+<br><br>
+The grid system of Bangladesh has a National Load Dispatching Center (NLDC) located in Aftabnagar, Rampura, Dhaka. According to the plan, 400 kV
+transmission lines are going to be hooked up with the grid system in the near future. The 400 kV lines will mainly be used to import electric power from India.
+Some of the key parameters of the above grid system are given below:<br>
+As per the present power system expansion plan, the dependable generation capacity of the country will be about 12 000 MW against a maximum demand of
+about 11 000 MW in 2017. The installed capacity is projected to increase to about 33 000 MW by 2030. It is expected that by 2020, the contribution from nuclear
+generation will be about 2000 MW and by 2030, it will be increased to about 5 000 MW. Keeping all the above in mind the PGCB needs to take up measures to
+upgrade the national grid so as to make it compatible with the generation capacity of the country and in particular, make the grid ready for accommodating the
+upcoming NPP by 2023 and a second unit by 2024. For this purpose, detailed power system studies including load flow studies, transient stability studies, long
+duration system dynamics studies involving loss of generation, etc., have already been conducted and PGCB is going to make necessary modifications and
+renovations in the grid system to make it compatible for the Rooppur NPP.<br>
+
+</p><br>
+<br>
+<p style="align-content: center;">
+<u><b>Generation Data of National Power Grid</b></u> <br>
+<center>
+    <img src="img/power_grid_demand_gap.JPG" alt=""><br>
+
+</center>
+</p>
+
+<br>
+<br>
+<p style="align-content: center;">
+<u><b>Generation Supply and System Loss</b></u> <br>
+<ol type="1">
+  <li>Grid System of National Power Grid of Bangladesh</li>
+</ol>
+<center>
+    <img src="img/system_loss.JPG" alt=""><br>
+  
+</center><br>
+</p>
+
+<br>
+<br>
+<p style="align-content: center;">
+<u><b>How to make flexible electricity through our solution</b></u> <br>
+<center>
+  <br>
+    <img src="img/pv_model_1.JPG" alt="n"><br>
+      <img src="img/pv_model_2.JPG" alt=""><br>
+</center>
+
+<ol>
+  <li>II. Possible methods of scaling down coal</li>
+  <ol type="a">
+    <li>Through coal-solar hybrids</li>
+    <br>
+<center>
+    <img src="img/power_plant_model.JPG" alt=""><br>
+
+</center>
+<br>
+<li>Through coal-natural gas co-firing</li><br>
+<p>Coal-natural gas co-firing technique can be instrumental in improving operational flexibility and reducing emissions. The EPA has advised that new
+emissions standards could be met by cofiring ~40% natural gas in highly efficient supercritical pulverized coal power plants. However, some industry
+observers think that more than this level would be needed and that, for this to be achievable, the boiler would need to be specifically designed to operate in
+this manner.<br>
+Various technical issues will need to be considered when a switch to cofiring is contemplated. For example, there can be significant impacts on heat transfer
+within the boiler.<br>
+</p>
+
+  </ol>
+</ol>
+<br>
+</p>
+
+
+
+<br><br>
+
+<br>
+
+<div class="footer">
+<div class="container">
+
+    <h2>Thanks for checking out this reseacrh!</h2>
+
+
+    <p>If you have any feedback, <a href="https://facebook.com/10e18">drop me a line</a>. I'd love to hear what you think.</p>
+
+    <h2>Contributors</h2>
+
+    <p>Huge thanks to Sanjida Nusrat Ananna, and Md.Sanaul Haque Shanto for their contribution.</p>
+
+    <h2>License</h2>
+
+    <p>This research is released in the public domain, under the <a href="https://creativecommons.org/publicdomain/zero/1.0/">Creative Commons Zero</a> license. That means you can not distribute, remix and adapt it however you like, without asking for permission. (Although if you do something cool with it, I'd love to hear from you.) Attribution is legally required, but it's always appreciated.</p>
+
+    <p>Spot a typo? You can fix it <a href="#">here</a>.</p>
+</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.2/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
+
+  <script type="text/javascript" src="graphsheep/sketch.js"></script>
+  <script type="text/javascript"> makeGraph1(); </script>
+
+  <script type="text/javascript" src="graphenergy/sketch.js"></script>
+  <script type="text/javascript"> makeGraph2(); </script>
+
+  <script type="text/javascript" src="graphenergyinteractive/sketch.js"></script>
+  <script type="text/javascript"> makeGraph3(xarr,yarr); </script>
+<script type="text/javascript" src="createsliders.js"></script>
+
+  <script type="text/javascript" src="forkingpaths.js"></script>
+
+
+<script type="text/javascript">
+   function isScrolledIntoView(elem)
+  {
+      var $elem = $(elem);
+      var $window = $(window);
+
+      var docViewTop = $window.scrollTop();
+      var docViewBottom = docViewTop + $window.height();
+
+      var elemTop = $elem.offset().top;
+      var elemBottom = elemTop + $elem.height();
+
+      return ((( elemTop >= docViewTop) && (elemTop <= docViewBottom)) || ((elemBottom >= docViewTop) && (elemBottom <= docViewBottom)) || (( elemTop <= docViewTop) && (elemBottom >= docViewBottom)));
+  }
+  </script>
+  </body>
+</html>
+
